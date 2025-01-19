@@ -18,8 +18,8 @@ count=0
 def Menu():
     global menu
     menu = Tk()
-    menu.title("CrossingDle")  # Set the title
-    menu.geometry("600x600")  # Initial size
+    menu.title("CrossingDle")
+    menu.geometry("600x600")
     menu.configure(background='white')
     menu.attributes("-fullscreen", True)
     menu.bind("<Escape>", lambda event: escape_window(event, menu))
@@ -194,13 +194,9 @@ def Main_game(State):
 
         attributes = ["Gender", "Species", "Hobby", "Personality", "Favorite Song", "Style 1", "Style 2"]
 
-
-
-
-        clicked = listbox.get(listbox.curselection())  # stores the pokemon u clicked on
-        Selected = df[df["Name"] == clicked]  # makes a new df with only the pokemon u clicked on
-        print(Selected)# prints selected (good for debugging and finding the index)
-        # pulls the selected pokemons stats and assigns them to the stat labels
+        clicked = listbox.get(listbox.curselection())
+        Selected = df[df["Name"] == clicked]
+        print(Selected)
         df = df[df["Name"] != clicked]
         Selected=Selected.reset_index()
         listbox.place(x=10000)
@@ -245,17 +241,11 @@ def Main_game(State):
         elif count == 1:
 
             Gender2["text"] = Selected["Gender"].to_string(index=False)
-
             Species2["text"] = Selected["Species"].to_string(index=False)
-
             Personality2["text"] = Selected["Personality"].to_string(index=False)
-
             Hobbies2["text"] = Selected["Hobby"].to_string(index=False)
-
             Style12["text"] = Selected["Style 1"].to_string(index=False)
-
             Style22["text"] = Selected["Style 2"].to_string(index=False)
-
             Song2["text"] = Selected["Favorite Song"].to_string(index=False)
 
             Names = [Gender2, Species2, Hobbies2, Personality2, Song2, Style12, Style22]
@@ -273,53 +263,33 @@ def Main_game(State):
                     Names[i]["bg"] = "#eb5a52"
                     i += 1
 
-            Gender.place(x=500, y=235)  # 80 + 145
-
+            Gender.place(x=500, y=235)
             Personality.place(x=680, y=235)
-
             Species.place(x=860, y=235)
-
             Hobbies.place(x=1040, y=235)
-
             Style1.place(x=1220, y=235)
-
             Style2.place(x=1400, y=235)
-
             Song.place(x=1580, y=235)
-
             image.place(x=320, y=235)
 
-            Gender2.place(x=500, y=90)  # Adjusted y by subtracting 10 from 80
-
+            Gender2.place(x=500, y=90)
             Personality2.place(x=680, y=90)
-
             Species2.place(x=860, y=90)
-
             Hobbies2.place(x=1040, y=90)
-
             Style12.place(x=1220, y=90)
-
             Style22.place(x=1400, y=90)
-
             Song2.place(x=1580, y=90)
-
             image2.place(x=320, y=90)
 
 
         elif count == 2:
 
             Gender3["text"] = Selected["Gender"].to_string(index=False)
-
             Species3["text"] = Selected["Species"].to_string(index=False)
-
             Personality3["text"] = Selected["Personality"].to_string(index=False)
-
             Hobbies3["text"] = Selected["Hobby"].to_string(index=False)
-
             Style13["text"] = Selected["Style 1"].to_string(index=False)
-
             Style23["text"] = Selected["Style 2"].to_string(index=False)
-
             Song3["text"] = Selected["Favorite Song"].to_string(index=False)
 
             Names = [Gender3, Species3, Hobbies3, Personality3, Song3, Style13, Style23]
@@ -337,69 +307,42 @@ def Main_game(State):
                     Names[i]["bg"] = "#eb5a52"
                     i += 1
 
-            Gender.place(x=500, y=380)  # 225 + 145
-
+            Gender.place(x=500, y=380)
             Personality.place(x=680, y=380)
-
             Species.place(x=860, y=380)
-
             Hobbies.place(x=1040, y=380)
-
             Style1.place(x=1220, y=380)
-
             Style2.place(x=1400, y=380)
-
             Song.place(x=1580, y=380)
-
             image.place(x=320, y=380)
 
             Gender2.place(x=500, y=235)
-
             Personality2.place(x=680, y=235)
-
             Species2.place(x=860, y=235)
-
             Hobbies2.place(x=1040, y=235)
-
             Style12.place(x=1220, y=235)
-
             Style22.place(x=1400, y=235)
-
             Song2.place(x=1580, y=235)
-
             image2.place(x=320, y=235)
 
-            Gender3.place(x=500, y=90)  # Adjusted y by subtracting 10 from 80
-
+            Gender3.place(x=500, y=90)
             Personality3.place(x=680, y=90)
-
             Species3.place(x=860, y=90)
-
             Hobbies3.place(x=1040, y=90)
-
             Style13.place(x=1220, y=90)
-
             Style23.place(x=1400, y=90)
-
             Song3.place(x=1580, y=90)
-
             image3.place(x=320, y=90)
 
 
         elif count == 3:
 
             Gender4["text"] = Selected["Gender"].to_string(index=False)
-
             Species4["text"] = Selected["Species"].to_string(index=False)
-
             Personality4["text"] = Selected["Personality"].to_string(index=False)
-
             Hobbies4["text"] = Selected["Hobby"].to_string(index=False)
-
             Style14["text"] = Selected["Style 1"].to_string(index=False)
-
             Style24["text"] = Selected["Style 2"].to_string(index=False)
-
             Song4["text"] = Selected["Favorite Song"].to_string(index=False)
 
             Names = [Gender4, Species4, Hobbies4, Personality4, Song4, Style14, Style24]
@@ -417,85 +360,51 @@ def Main_game(State):
                     Names[i]["bg"] = "#eb5a52"
                     i += 1
 
-            Gender.place(x=500, y=525)  # 360 + 145
-
+            Gender.place(x=500, y=525)
             Personality.place(x=680, y=525)
-
             Species.place(x=860, y=525)
-
             Hobbies.place(x=1040, y=525)
-
             Style1.place(x=1220, y=525)
-
             Style2.place(x=1400, y=525)
-
             Song.place(x=1580, y=525)
-
             image.place(x=320, y=525)
 
             Gender2.place(x=500, y=380)
-
             Personality2.place(x=680, y=380)
-
             Species2.place(x=860, y=380)
-
             Hobbies2.place(x=1040, y=380)
-
             Style12.place(x=1220, y=380)
-
             Style22.place(x=1400, y=380)
-
             Song2.place(x=1580, y=380)
-
             image2.place(x=320, y=380)
 
             Gender3.place(x=500, y=235)
-
             Personality3.place(x=680, y=235)
-
             Species3.place(x=860, y=235)
-
             Hobbies3.place(x=1040, y=235)
-
             Style13.place(x=1220, y=235)
-
             Style23.place(x=1400, y=235)
-
             Song3.place(x=1580, y=235)
-
             image3.place(x=320, y=235)
 
-            Gender4.place(x=500, y=90)  # Adjusted y by subtracting 10 from 80
-
+            Gender4.place(x=500, y=90)
             Personality4.place(x=680, y=90)
-
             Species4.place(x=860, y=90)
-
             Hobbies4.place(x=1040, y=90)
-
             Style14.place(x=1220, y=90)
-
             Style24.place(x=1400, y=90)
-
             Song4.place(x=1580, y=90)
-
             image4.place(x=320, y=90)
 
 
         elif count == 4:
 
             Gender5["text"] = Selected["Gender"].to_string(index=False)
-
             Species5["text"] = Selected["Species"].to_string(index=False)
-
             Personality5["text"] = Selected["Personality"].to_string(index=False)
-
             Hobbies5["text"] = Selected["Hobby"].to_string(index=False)
-
             Style15["text"] = Selected["Style 1"].to_string(index=False)
-
             Style25["text"] = Selected["Style 2"].to_string(index=False)
-
             Song5["text"] = Selected["Favorite Song"].to_string(index=False)
 
             Names = [Gender5, Species5, Hobbies5, Personality5, Song5, Style15, Style25]
@@ -512,101 +421,60 @@ def Main_game(State):
                 else:
                     Names[i]["bg"] = "#eb5a52"
                     i += 1
-            Gender.place(x=500, y=670)  # 505 + 145
-
+            Gender.place(x=500, y=670)
             Personality.place(x=680, y=670)
-
             Species.place(x=860, y=670)
-
             Hobbies.place(x=1040, y=670)
-
             Style1.place(x=1220, y=670)
-
             Style2.place(x=1400, y=670)
-
             Song.place(x=1580, y=670)
-
             image.place(x=320, y=670)
 
             Gender2.place(x=500, y=525)
-
             Personality2.place(x=680, y=525)
-
             Species2.place(x=860, y=525)
-
             Hobbies2.place(x=1040, y=525)
-
             Style12.place(x=1220, y=525)
-
             Style22.place(x=1400, y=525)
-
             Song2.place(x=1580, y=525)
-
             image2.place(x=320, y=525)
 
             Gender3.place(x=500, y=380)
-
             Personality3.place(x=680, y=380)
-
             Species3.place(x=860, y=380)
-
             Hobbies3.place(x=1040, y=380)
-
             Style13.place(x=1220, y=380)
-
             Style23.place(x=1400, y=380)
-
             Song3.place(x=1580, y=380)
-
             image3.place(x=320, y=380)
 
             Gender4.place(x=500, y=235)
-
             Personality4.place(x=680, y=235)
-
             Species4.place(x=860, y=235)
-
             Hobbies4.place(x=1040, y=235)
-
             Style14.place(x=1220, y=235)
-
             Style24.place(x=1400, y=235)
-
             Song4.place(x=1580, y=235)
-
             image4.place(x=320, y=235)
 
-            Gender5.place(x=500, y=90)  # Adjusted y by subtracting 10 from 80
-
+            Gender5.place(x=500, y=90)
             Personality5.place(x=680, y=90)
-
             Species5.place(x=860, y=90)
-
             Hobbies5.place(x=1040, y=90)
-
             Style15.place(x=1220, y=90)
-
             Style25.place(x=1400, y=90)
-
             Song5.place(x=1580, y=90)
-
             image5.place(x=320, y=90)
 
 
         elif count == 5:
 
             Gender6["text"] = Selected["Gender"].to_string(index=False)
-
             Species6["text"] = Selected["Species"].to_string(index=False)
-
             Personality6["text"] = Selected["Personality"].to_string(index=False)
-
             Hobbies6["text"] = Selected["Hobby"].to_string(index=False)
-
             Style16["text"] = Selected["Style 1"].to_string(index=False)
-
             Style26["text"] = Selected["Style 2"].to_string(index=False)
-
             Song6["text"] = Selected["Favorite Song"].to_string(index=False)
 
             Names = [Gender6, Species6, Hobbies6, Personality6, Song6, Style16, Style26]
@@ -624,100 +492,58 @@ def Main_game(State):
                     Names[i]["bg"] = "#eb5a52"
                     i += 1
 
-            Gender.place(x=500, y=815)  # 645 + 145
-
+            Gender.place(x=500, y=815)
             Personality.place(x=680, y=815)
-
             Species.place(x=860, y=815)
-
             Hobbies.place(x=1040, y=815)
-
             Style1.place(x=1220, y=815)
-
             Style2.place(x=1400, y=815)
-
             Song.place(x=1580, y=815)
-
             image.place(x=320, y=815)
 
             Gender2.place(x=500, y=670)
-
             Personality2.place(x=680, y=670)
-
             Species2.place(x=860, y=670)
-
             Hobbies2.place(x=1040, y=670)
-
             Style12.place(x=1220, y=670)
-
             Style22.place(x=1400, y=670)
-
             Song2.place(x=1580, y=670)
-
             image2.place(x=320, y=670)
 
             Gender3.place(x=500, y=525)
-
             Personality3.place(x=680, y=525)
-
             Species3.place(x=860, y=525)
-
             Hobbies3.place(x=1040, y=525)
-
             Style13.place(x=1220, y=525)
-
             Style23.place(x=1400, y=525)
-
             Song3.place(x=1580, y=525)
-
             image3.place(x=320, y=525)
 
             Gender4.place(x=500, y=380)
-
             Personality4.place(x=680, y=380)
-
             Species4.place(x=860, y=380)
-
             Hobbies4.place(x=1040, y=380)
-
             Style14.place(x=1220, y=380)
-
             Style24.place(x=1400, y=380)
-
             Song4.place(x=1580, y=380)
-
             image4.place(x=320, y=380)
 
             Gender5.place(x=500, y=235)
-
             Personality5.place(x=680, y=235)
-
             Species5.place(x=860, y=235)
-
             Hobbies5.place(x=1040, y=235)
-
             Style15.place(x=1220, y=235)
-
             Style25.place(x=1400, y=235)
-
             Song5.place(x=1580, y=235)
-
             image5.place(x=320, y=235)
 
-            Gender6.place(x=500, y=90)  # Adjusted y by subtracting 10 from 80
-
+            Gender6.place(x=500, y=90)
             Personality6.place(x=680, y=90)
-
             Species6.place(x=860, y=90)
-
             Hobbies6.place(x=1040, y=90)
-
             Style16.place(x=1220, y=90)
-
             Style26.place(x=1400, y=90)
-
             Song6.place(x=1580, y=90)
-
             image6.place(x=320, y=90)
 
 
@@ -831,8 +657,8 @@ def Main_game(State):
             # Open the image using Pillow from the binary content
             img = Image.open(BytesIO(response.content))
 
-            # Resize image to fit within the Tkinter window (optional)
-            img = img.resize((86, 140))  # You can adjust the size as needed
+            # Resize image to fit within the Tkinter window
+            img = img.resize((86, 140))
 
             # Convert the image to a format Tkinter can display (PhotoImage)
             img_tk = ImageTk.PhotoImage(img)
@@ -902,7 +728,7 @@ def Main_game(State):
 
     searchbar=Entry(font="Arial 14",bg="#f0f0f0")
     searchbar.place(x=500, y=30,width=600)
-    listbox = Listbox(root, bg="white",)#creates a list box which is gonna contain all the pokemon (user will be able to click on any of them)
+    listbox = Listbox(root, bg="white",)
 
     listbox.bind("<<ListboxSelect>>",guess)
     searchbar.bind("<KeyRelease>",search)
@@ -914,8 +740,8 @@ def LoseOrWin(won):
     global RandomVillager
     root.destroy()
     win=Tk()
-    win.title("Crossingdle")  # Set the title
-    win.geometry("600x600")  # Initial size
+    win.title("Crossingdle")
+    win.geometry("600x600")
     win.configure(background='white')
     win.attributes("-fullscreen", True)
     win.bind("<Escape>", lambda event: escape_window(event, win))
@@ -952,10 +778,7 @@ def LoseOrWin(won):
         # Convert the image to a format Tkinter can display (PhotoImage)
         img_tk = ImageTk.PhotoImage(img)
 
-
         image.config(image=img_tk)
     win.mainloop()
-
-
 
 Menu()
